@@ -3,204 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marwat Fish - Fresh & Frozen Seafood</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Marwat Fish - Fresh & Frozen Fish</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .fish-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .fish-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .fish-card:hover {
+            transform: translateY(-5px);
+        }
+        .fish-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .fish-info {
+            padding: 20px;
+        }
+        .fish-name {
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+            color: #005f73;
+        }
+        .fish-rate {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #9b2226;
+            margin-bottom: 15px;
+        }
+        .order-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #0a9396;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .order-btn:hover {
+            background-color: #005f73;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #005f73;
+            color: white;
+            margin-top: 50px;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <!-- Header / Navbar -->
-    <nav class="bg-blue-900 text-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i class="fas fa-fish text-cyan-400 text-2xl"></i>
-                <span class="text-xl font-bold tracking-wide">MARWAT FISH</span>
-            </div>
-            <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20fresh%20fish." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold flex items-center gap-2 transition-all shadow">
-                <i class="fab fa-whatsapp text-lg"></i> Contact Us
-            </a>
-        </div>
-    </nav>
+    <header>
+        <h1>Marwat Fish</h1>
+        <p>Fresh & Frozen Fish Online Ordering</p>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-800 to-cyan-700 text-white py-16 text-center px-4 shadow-inner">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-md">Fresh & Frozen Fish Delivered to Your Doorstep</h1>
-            <p class="text-base md:text-lg text-cyan-100 mb-8 max-w-xl mx-auto">High-quality, clean, and 100% fresh seafood. Order now and get the best market rates in Karachi!</p>
-            <a href="#menu" class="bg-amber-500 hover:bg-amber-600 text-blue-950 font-bold px-6 py-3 rounded-xl shadow-lg transition-transform transform hover:scale-105 inline-block">
-                View Our Menu & Rates
-            </a>
-        </div>
-    </section>
+    <div class="container">
+        <div class="fish-grid">
 
-    <!-- Main Content Container -->
-    <main id="menu" class="container mx-auto px-4 py-12">
-        
-        <!-- Section Heading -->
-        <div class="flex items-center gap-2 border-b-4 border-cyan-500 pb-3 mb-8">
-            <i class="fas fa-water text-cyan-600 text-2xl"></i>
-            <h2 class="text-2xl font-bold text-blue-900">Fresh Seafood Menu & Rates (Taaza Machli)</h2>
-        </div>
-
-        <!-- Products Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Item 1: Jheenga -->
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between">
-                <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400 relative">
-                    <img src="jheenga.jpg" alt="Jheenga" class="w-full h-full object-cover">
-                    <span class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow">Best Seller</span>
-                </div>
-                <div class="p-5 flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Jheenga (Prawns)</h3>
-                    <p class="text-gray-500 text-sm mt-1">Freshly caught, juicy, and cleaned prawns perfect for seafood lovers.</p>
-                </div>
-                <div class="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                    <div>
-                        <span class="text-2xl font-black text-blue-900">Rs. 1,300</span>
-                        <span class="text-xs text-gray-500 font-normal">/ KG</span>
-                    </div>
-                    <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20Jheenga%20(Prawns)." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition-colors">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
+            <!-- Fish Card 1: Jheenga -->
+            <div class="fish-card">
+                <img src="jheenga.jpg" alt="Jheenga" class="fish-image">
+                <div class="fish-info">
+                    <h3 class="fish-name">Jheenga (Prawns)</h3>
+                    <div class="fish-rate">Rate: Rs. 1,200 / KG</div>
+                    <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Jheenga" class="order-btn" target="_blank">Order via WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Item 2: Surmai -->
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between">
-                <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                    <img src="surmai.jpg" alt="Surmai Fish" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Surmai Fish (سرمئی)</h3>
-                    <p class="text-gray-500 text-sm mt-1">Premium rich taste, uniform cuts, ideal for fish fry and traditional curries.</p>
-                </div>
-                <div class="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                    <div>
-                        <span class="text-2xl font-black text-blue-900">Rs. 1,200</span>
-                        <span class="text-xs text-gray-500 font-normal">/ KG</span>
-                    </div>
-                    <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20Surmai%20Fish." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition-colors">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
+            <!-- Fish Card 2: Surmai -->
+            <div class="fish-card">
+                <img src="surmai.jpg" alt="Surmai" class="fish-image">
+                <div class="fish-info">
+                    <h3 class="fish-name">Surmai Fish</h3>
+                    <div class="fish-rate">Rate: Rs. 1,800 / KG</div>
+                    <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Surmai" class="order-btn" target="_blank">Order via WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Item 3: Mushka -->
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between">
-                <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                    <img src="mushka.jpg" alt="Mushka Fish" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Mushka Fish (مشکا)</h3>
-                    <p class="text-gray-500 text-sm mt-1">Super fresh sea fish, white tender meat, highly recommended for winter frying.</p>
-                </div>
-                <div class="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                    <div>
-                        <span class="text-2xl font-black text-blue-900">Rs. 1,200</span>
-                        <span class="text-xs text-gray-500 font-normal">/ KG</span>
-                    </div>
-                    <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20Mushka%20Fish." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition-colors">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
+            <!-- Fish Card 3: Mushka -->
+            <div class="fish-card">
+                <img src="mushka.jpg" alt="Mushka" class="fish-image">
+                <div class="fish-info">
+                    <h3 class="fish-name">Mushka Fish</h3>
+                    <div class="fish-rate">Rate: Rs. 950 / KG</div>
+                    <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Mushka" class="order-btn" target="_blank">Order via WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Item 4: Dohtar -->
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between">
-                <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                    <img src="dohtar.jpg" alt="Dohtar Fish" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Dohtar Fish (دوہتر)</h3>
-                    <p class="text-gray-500 text-sm mt-1">Delicious local favorite fish, expertly cleaned and sliced to your preference.</p>
-                </div>
-                <div class="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                    <div>
-                        <span class="text-2xl font-black text-blue-900">Rs. 1,000</span>
-                        <span class="text-xs text-gray-500 font-normal">/ KG</span>
-                    </div>
-                    <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20Dohtar%20Fish." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition-colors">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
+            <!-- Fish Card 4: Dandia -->
+            <div class="fish-card">
+                <img src="dandia.jpg" alt="Dandia" class="fish-image">
+                <div class="fish-info">
+                    <h3 class="fish-name">Dandia (Dandus)</h3>
+                    <div class="fish-rate">Rate: Rs. 850 / KG</div>
+                    <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Dandia" class="order-btn" target="_blank">Order via WhatsApp</a>
                 </div>
             </div>
 
-            <!-- Item 5: Kukarh -->
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between">
-                <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                    <img src="kukarh.jpg" alt="Kukarh Fish" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Kukarh Fish (کوکڑھ)</h3>
-                    <p class="text-gray-500 text-sm mt-1">Packed with coastal flavor, perfect texture for spicy masala gravies.</p>
-                </div>
-                <div class="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                    <div>
-                        <span class="text-2xl font-black text-blue-900">Rs. 1,000</span>
-                        <span class="text-xs text-gray-500 font-normal">/ KG</span>
-                    </div>
-                    <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20Kukarh%20Fish." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition-colors">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
-                </div>
-            </div>
-
-            <!-- Item 6: Rawans -->
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between">
-                <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                    <img src="rawans.jpg" alt="Rawans Fish" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Rawans Fish (راوانس)</h3>
-                    <p class="text-gray-500 text-sm mt-1">Excellent nutritional choice, premium quality catch from deep sea waters.</p>
-                </div>
-                <div class="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                    <div>
-                        <span class="text-2xl font-black text-blue-900">Rs. 1,000</span>
-                        <span class="text-xs text-gray-500 font-normal">/ KG</span>
-                    </div>
-                    <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20Rawans%20Fish." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition-colors">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
-                </div>
-            </div>
-
-            <!-- Item 7: Dandia -->
-            <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between">
-                <div class="bg-gray-200 h-48 flex items-center justify-center text-gray-400">
-                    <img src="dandia.jpg" alt="Dandnia Fish" class="w-full h-full object-cover">
-                </div>
-                <div class="p-5 flex-grow text-center">
-                    <h3 class="text-xl font-bold text-gray-900">Dandnia Fish (ڈانڈنیا)</h3>
-                    <p class="text-gray-500 text-sm mt-1">Budget-friendly everyday fish with fantastic taste, very popular choice.</p>
-                </div>
-                <div class="p-5 pt-0 border-t border-gray-50 flex justify-between items-center bg-gray-50/50">
-                    <div>
-                        <span class="text-2xl font-black text-blue-900">Rs. 800</span>
-                        <span class="text-xs text-gray-500 font-normal">/ KG</span>
-                    </div>
-                    <a href="https://wa.me/923082325964?text=Salam%20Marwat%20Fish%2C%20I%20want%20to%20order%20Dandnia%20Fish." target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition-colors">
-                        <i class="fab fa-whatsapp"></i> Order Now
-                    </a>
+            <!-- Fish Card 5: Rawas (Sangra) -->
+            <div class="fish-card">
+                <img src="Sangra.jpg" alt="Rawas" class="fish-image">
+                <div class="fish-info">
+                    <h3 class="fish-name">Rawas (Sangra)</h3>
+                    <div class="fish-rate">Rate: Rs. 1,500 / KG</div>
+                    <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20Rawas" class="order-btn" target="_blank">Order via WhatsApp</a>
                 </div>
             </div>
 
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-blue-950 text-gray-400 py-8 border-t border-blue-900 text-center px-4">
-        <p class="text-sm font-medium text-white mb-2">&copy; 2026 Marwat Fish. All Rights Reserved.</p>
-        <p class="text-xs">Freshness & Quality Delivered across Karachi.</p>
+    <footer>
+        <p>&copy; 2026 Marwat Fish. All Rights Reserved.</p>
     </footer>
 
 </body>

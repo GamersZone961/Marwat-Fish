@@ -3,38 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marwat Fish - Fresh & Frozen Sea food</title>
+    <title>Marwat Fish - Fresh & Frozen Fish</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
+            background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background-color: #005f73;
+            background-color: #005F73;
             color: white;
             padding: 20px;
             text-align: center;
             position: relative;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        h1 {
+        header h1 {
             margin: 0;
             font-size: 2.2rem;
         }
         .subtitle {
-            margin: 5px 0 0 0;
+            margin: 5px 0 0;
             font-size: 0.95rem;
             opacity: 0.9;
         }
-        /* Top Right Call Button */
         .top-call-btn {
             position: absolute;
             top: 15px;
             right: 15px;
-            background-color: #e63946;
+            background-color: #ee6c4d;
             color: white;
             padding: 8px 14px;
             border-radius: 20px;
@@ -55,83 +54,60 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-        } 
-        <div class="fish-card">
-    <img src="Dhotar.jpg" alt="Dohtar Fish">
-    <div class="fish-info">
-        <div class="fish-name">Dohtar Fish</div>
-        <div class="fish-price">Rs. 1,200 / kg</div>
-        <a href="https://wa.me/923082325964?text=I%20want%20to%20order%20Dohtar%20fish" class="order-btn" target="_blank">Order on WhatsApp</a>
-    </div>
-</div>
-
+        }
         .fish-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
         }
         .fish-card:hover {
             transform: translateY(-5px);
         }
-        .fish-image {
+        .fish-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
         .fish-info {
             padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
         .fish-name {
             font-size: 1.3rem;
-            margin: 0 0 8px 0;
-            color: #005f73;
-        }
-        .fish-rate {
-            font-size: 1.15rem;
             font-weight: bold;
-            color: #9b2226;
+            color: #005F73;
+            margin: 0 0 10px;
+        }
+        .fish-price {
+            font-size: 1.1rem;
+            color: #ee6c4d;
+            font-weight: bold;
             margin-bottom: 15px;
         }
         .order-btn {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #25d366;
+            margin-top: auto;
+            background-color: #25D366;
             color: white;
             text-align: center;
+            padding: 10px;
+            border-radius: 5px;
             text-decoration: none;
-            border-radius: 6px;
             font-weight: bold;
-            font-size: 1rem;
-            transition: background 0.2s;
+            display: block;
         }
         .order-btn:hover {
-            background-color: #1ebe5d;
-        }
-        /* Floating WhatsApp Button */
-        .float-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 100;
-            text-decoration: none;
+            background-color: #20ba5a;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #005f73;
+            background-color: #333;
             color: white;
             margin-top: 40px;
         }
@@ -140,71 +116,26 @@
 <body>
 
     <header>
-        <!-- Top Right Direct Call Button -->
-        <a href="tel:03399669988" class="top-call-btn">📞 Call Now</a>
-        
         <h1>Marwat Fish</h1>
-        <p class="subtitle">Fresh & Frozen Fish Online Ordering</p>
+        <p class="subtitle">Fresh & Frozen Fish Available Daily</p>
+        <a href="tel:03082325964" class="top-call-btn">📞 Call Now</a>
     </header>
 
     <div class="container">
         <div class="fish-grid">
 
-            <!-- Fish Card 1: Jheenga -->
+            <!-- Dohtar Fish Card -->
             <div class="fish-card">
-                <img src="jheenga.jpg" alt="Jheenga" class="fish-image">
+                <img src="Dhotar.jpg" alt="Dohtar Fish">
                 <div class="fish-info">
-                    <h3 class="fish-name">Jheenga (Prawns)</h3>
-                    <div class="fish-rate">Rate: Rs. 1,200 / KG</div>
-                    <a href="https://wa.me/923082325964?text=I%20want%20to%20order%20Jheenga" class="order-btn" target="_blank">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Fish Card 2: Surmai -->
-            <div class="fish-card">
-                <img src="surmai.jpg" alt="Surmai" class="fish-image">
-                <div class="fish-info">
-                    <h3 class="fish-name">Surmai Fish</h3>
-                    <div class="fish-rate">Rate: Rs. 1,500 / KG</div>
-                    <a href="https://wa.me/923082325964?text=I%20want%20to%20order%20Surmai" class="order-btn" target="_blank">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Fish Card 3: Mushka -->
-            <div class="fish-card">
-                <img src="mushka.jpg" alt="Mushka" class="fish-image">
-                <div class="fish-info">
-                    <h3 class="fish-name">Mushka Fish</h3>
-                    <div class="fish-rate">Rate: Rs. 950 / KG</div>
-                    <a href="https://wa.me/923082325964?text=I%20want%20to%20order%20Mushka" class="order-btn" target="_blank">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Fish Card 4: Dandia -->
-            <div class="fish-card">
-                <img src="dandia.jpg" alt="Dandia" class="fish-image">
-                <div class="fish-info">
-                    <h3 class="fish-name">Dandia (Dandus)</h3>
-                    <div class="fish-rate">Rate: Rs. 850 / KG</div>
-                    <a href="https://wa.me/923082325964?text=I%20want%20to%20order%20Dandia" class="order-btn" target="_blank">Order via WhatsApp</a>
-                </div>
-            </div>
-
-            <!-- Fish Card 5: Rawas (Sangra) -->
-            <div class="fish-card">
-                <img src="Sangra.jpg" alt="Rawas" class="fish-image">
-                <div class="fish-info">
-                    <h3 class="fish-name">Rawas (Sangra)</h3>
-                    <div class="fish-rate">Rate: Rs. 1,300 / KG</div>
-                    <a href="https://wa.me/923082325964?text=I%20want%20to%20order%20Rawas" class="order-btn" target="_blank">Order via WhatsApp</a>
+                    <div class="fish-name">Dohtar Fish</div>
+                    <div class="fish-price">Rs. 1,200 / kg</div>
+                    <a href="https://wa.me/923082325964?text=I%20want%20to%20order%20Dohtar%20fish" class="order-btn" target="_blank">Order on WhatsApp</a>
                 </div>
             </div>
 
         </div>
     </div>
-
-    <!-- Floating WhatsApp Icon at Bottom Right -->
-    <a href="https://wa.me/923082325964?text=Hello%20Marwat%20Fish,%20I%20want%20to%20order%20fish" class="float-whatsapp" target="_blank">💬</a>
 
     <footer>
         <p>&copy; 2026 Marwat Fish. All Rights Reserved.</p>

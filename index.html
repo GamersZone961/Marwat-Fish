@@ -49,6 +49,20 @@
             align-items: center;
             gap: 5px;
         }
+        /* Scrolling Offer Banner Styles */
+        .offer-ticker {
+            background-color: #ee6c4d;
+            color: white;
+            padding: 10px 0;
+            font-weight: bold;
+            font-size: 0.95rem;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .offer-ticker marquee {
+            letter-spacing: 0.5px;
+        }
         .container {
             max-width: 1200px;
             margin: 25px auto;
@@ -124,6 +138,13 @@
         <p class="subtitle">Fresh & Frozen Sea Food</p>
         <a href="tel:03082325964" class="top-call-btn">📞 Call Now</a>
     </header>
+
+    <!-- Scrolling Offer Ticker -->
+    <div class="offer-ticker">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            🔥 SPECIAL OFFER: Free Delivery on orders of 5kg and above! 🚚 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; ⚠️ Note: Delivery charges will apply for orders less than 5kg. &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; 🐟 Order now via WhatsApp!
+        </marquee>
+    </div>
 
     <div class="container">
         <div class="fish-grid">
